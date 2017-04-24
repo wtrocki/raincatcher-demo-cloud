@@ -1,0 +1,79 @@
+{
+  "realm": "raincatcher",
+  "enabled": true,
+  "sslRequired": "external",
+  "registrationAllowed": true,
+  "requiredCredentials": [
+    "password"
+  ],
+  "users": [
+    {
+      "username": "trever",
+      "enabled": true,
+      "email": "trever@raincatcher",
+      "firstName": "Trever",
+      "lastName": "Smith",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "123"
+        }
+      ],
+      "realmRoles": [
+        "admin",
+        "user"
+      ],
+      "clientRoles": {
+          "account": [
+            "view-profile",
+            "manage-account"
+          ]
+      }
+    }
+  ],
+  "roles": {
+    "realm": [
+      {
+        "name": "user",
+        "description": "User privileges"
+      },
+      {
+        "name": "admin",
+        "description": "Administrator privileges"
+      }
+    ]
+  },
+  "scopeMappings": [
+    {
+      "client": "raincatcher-mobile",
+      "roles": [
+        "user",
+        "admin"
+      ]
+    }
+  ],
+  "clients": [
+    {
+      "clientId": "raincatcher-mobile",
+      "enabled": true,
+      "publicClient": true,
+      "adminUrl": "http://localhost:8001/",
+      "baseUrl": "http://localhost:8001/",
+      "redirectUris": [
+        "http://localhost:8001/*"
+      ],
+      "webOrigins": []
+    }
+  ],
+  "clientScopeMappings": {
+    "account": [
+      {
+        "client": "raincatcher-mobile",
+        "roles": [
+          "view-profile",
+          "manage-account"
+        ]
+      }
+    ]
+  }
+}

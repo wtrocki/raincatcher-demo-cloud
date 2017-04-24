@@ -59,7 +59,7 @@ module.exports = function(grunt) {
         FH_APP_API_KEY: "",
         WFM_AUTH_GUID: "iidn3tvprs62asdebat5m3eg",
         // Using simple store by default. Uncomment to use mongoose.
-        //FH_MONGODB_CONN_URL:"mongodb://localhost/raincatcher",
+        FH_MONGODB_CONN_URL:"mongodb://localhost/raincatcher",
 
         /*
          * This is mapping to authentication service, when running raincatcher-demo-auth locally it will map to it
